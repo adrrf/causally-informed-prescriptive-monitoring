@@ -11,6 +11,7 @@ import pprint
 import joblib
 import json
 import os
+import time
 
 
 def label_encode(df, columns):
@@ -105,7 +106,10 @@ def run_experiment(
 
         if not os.path.exists(f"../models/{name}/{experiment}_{i}.pkl"):
             model = RandomForestRegressor(n_jobs=-1, random_state=42)
+            start = time.time()
             model.fit(X_train, y_train)
+            end = time.time()
+            iter_results["time"] = end - start
             joblib.dump(model, f"../models/{name}/{experiment}_{i}.pkl")
         else:
             model = joblib.load(f"../models/{name}/{experiment}_{i}.pkl")
