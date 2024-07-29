@@ -45,25 +45,6 @@ def causal_inference_fci(df, name):
     return pdy
 
 
-def get_parents(pdy, node, depth=1):
-    """
-    Get the parents of a node in the graph
-    :param node: node to get parents of
-    :param depth: depth to search for parents
-    :param pdy: pydot graph
-    :return: list of parents
-    """
-
-    parents = []
-    for edge in pdy.get_edges():
-        if edge.get_destination() == node:
-            source = edge.get_source()
-            parents.append(source)
-            if depth > 1:
-                parents.extend(get_parents(pdy, source, depth - 1))
-    return parents
-
-
 def run_experiment(
     df, target, name, experiment, columns=None, n_splits=5, random_state=33
 ):
