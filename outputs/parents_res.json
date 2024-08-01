@@ -1,0 +1,24 @@
+{
+    "BPI2013": {
+      "time_from_start_timestamp": ["event_order_timestamp", "total_time_timestamp", "Owner Country"],
+      "Involved ST": ["Involved ST Function Div", "Involved Org line 3", "SR Latest Impact"],
+      "Sub Status": ["Status", "time_from_midnight_timestamp"]
+    },
+    "BPI2015_1": {
+      "caseProcedure": ["monitoringResource", "parts", "endDate", "total_time_timestamp"],
+      "question": ["activityNameNL"],
+      "time_from_start_timestamp": ["Includes_subCases"],
+      "time_from_midnight_timestamp": ["endDatePlanned", "termName"]
+    },
+    "BPI2015_2": {
+      "activityNameEN": ["requestComplete"],
+      "question": ["activityNameNL"],
+      "time_from_start_timestamp": ["event_order_timestamp"],
+      "time_from_midnight_timestamp": ["planned", "endDatePlanned", "Includes_subCases"]
+    },
+    "Traffic": {
+      "Activity": ["expense", "label"],
+      "weekday": ["event_order_timestamp"],
+      "time_from_start_timestamp": ["notificationType", "open_cases", "month"]
+    }
+  }
