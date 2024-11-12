@@ -1,4 +1,4 @@
-# causally-informed-prescriptive-monitoring
+# causally-informed-predictive-monitoring
 
 This structured approach provides a comprehensive framework for integrating causal inference into predictive process monitoring, demonstrating the tangible benefits through real-life case studies.
 
